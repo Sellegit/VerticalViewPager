@@ -1,4 +1,4 @@
-package fr.castorflex.android.verticalviewpager;
+package fr.castorflex.android.views;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -221,10 +221,8 @@ public class VerticalViewPager extends ViewGroup {
     /**
      * Used internally to monitor when adapters are switched.
      */
-    interface OnAdapterChangeListener {
-        public void onAdapterChanged(PagerAdapter oldAdapter, PagerAdapter newAdapter);
-    }
-
+    
+    
     /**
      * Used internally to tag special types of child views that should be added as
      * pager decorations by default.
@@ -239,6 +237,11 @@ public class VerticalViewPager extends ViewGroup {
 
     public VerticalViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
+        initViewPager();
+    }
+
+    public VerticalViewPager(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
         initViewPager();
     }
 
